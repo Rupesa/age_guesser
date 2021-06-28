@@ -1,18 +1,4 @@
-# import os
-# import glob
-# import shutil
-
-# for i in glob.glob("/Users/ruisantos/Desktop/ano4/aa/project2/heartbeat/photos/*"):
-#     filename = "def"
-#     if (((int) i) < 18):
-#         filename = "young"
-        
-
-
-#     if not os.path.exists("/Users/ruisantos/Desktop/ano4/aa/project2/wiki_crop/photos/"+str(age)+"/"):
-#         os.makedirs("/Users/ruisantos/Desktop/ano4/aa/project2/heartbeat/photos2/"+str(age)+"/")
-#     shutil.move(i,"/Users/ruisantos/Desktop/ano4/aa/project2/heartbeat/photos2/"+str(age)+"/"+filename)
-
+# Script que divide as fotografias organizadas em pastas pela sua idade e coloca-as em 5 classes.
 
 import shutil
 import os
@@ -37,7 +23,5 @@ for i in range(7, 100):
 
     file_names = os.listdir(this_src_dir)
     for file_name in file_names:
-        #print(file_name)
-        #print(os.path.getsize('/Users/ruisantos/Desktop/ano4/aa/project2/heartbeat/photos/'+ str(i) + "/" + file_name))
         if (os.path.getsize('/Users/ruisantos/Desktop/ano4/aa/project2/heartbeat/photos/'+ str(i) + "/" + file_name) > 334) & (file_name != '.DS_Store'):
             shutil.copy(os.path.join(this_src_dir, file_name), this_dest_dir)
